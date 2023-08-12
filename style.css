@@ -6,11 +6,7 @@
   padding: 0;
 }
 /* header and nav bar style --------------------------  start */
-/* header {
-  width: 1280px;
-  height: 40px;
-  margin: 0 auto;
-} */
+
 nav {
   background-color: #163651;
   display: flex;
@@ -53,6 +49,12 @@ nav {
 .menu-item ul > li {
   list-style: none;
   padding: 0 20px;
+}
+#chck1 {
+  display: none;
+}
+.menu{
+  display: none;
 }
 /* header and nav bar style --------------------------  end */
 
@@ -177,3 +179,82 @@ nav {
   width: 100px;
 }
 /* service-section style is --------------------- end */
+
+/* responsive only mobile device */
+@media screen and (max-width: 570px) {
+  nav {
+    justify-content: space-between;
+    margin: auto;
+    padding: auto;
+  }
+  .contact-info {
+    flex-direction: column;
+    margin-left: -50px;
+  }
+  .social-info {
+margin-right:-70px;
+gap: 5px;
+
+
+
+    flex-direction: column;
+  }
+  .line-separate {
+    margin: 0;
+  }
+  .menu-bar {
+    margin:  0;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px ;
+  }
+
+  .menu-item ul {
+    position: fixed;
+    top: 150px;
+    right: -100%;
+
+    background: rgba(0, 0, 0, 0.5);
+    height: calc(100vh - 100px);
+    width: 50%;
+    flex-direction: column;
+    align-items: center;
+    transition: right 0.5s linear;
+  }
+  .menu-item ul li{
+    color: #ffffff;
+  }
+  .menu{
+    display: block;
+
+    text-align: center;
+  }
+  #chck1:checked ~   .menu-item ul {
+    right: 0;
+  }
+
+
+
+  .banner-section {
+    width: 100%;
+    flex-direction: column;
+    gap: 50px;
+  }
+  .banner-heading {
+   margin-left: 25px;
+  }
+  .banner-description{
+    margin-left: 25px;
+  }
+  .start-button{
+    margin-left: 25px;
+  }
+
+  .service-section {
+    flex-direction: column;
+    width: 100%;
+    margin: auto;
+    padding: auto;
+  }
+}
